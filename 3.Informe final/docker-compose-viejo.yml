@@ -1,0 +1,23 @@
+version: "2"
+services:
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: monitoring_grafana
+    ports:
+      - "3000:3000"
+    links:
+      - prometheus
+    volumes:
+      - ./data/grafana:/var/lib/grafana
+    restart: always
+  
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    restart: always
+
+volumes:
+  ./data/grafana:
+    driver: local
