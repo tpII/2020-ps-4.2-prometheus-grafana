@@ -1,8 +1,8 @@
 # my global config
 
 global:
-  scrape_interval:     40s # By default, scrape targets every 15 seconds.
-  evaluation_interval: 40s # By default, scrape targets every 15 seconds.
+  scrape_interval:     5s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 5s # By default, scrape targets every 15 seconds.
   # scrape_timeout is set to the global default (10s).
   # Attach these labels to any time series or alerts when communicating with
   # external systems (federation, remote storage, Alertmanager).
@@ -27,7 +27,7 @@ scrape_configs:
 
     # Override the global default and scrape targets from this job every 5 seconds.
 
-    scrape_interval: 40s
+    scrape_interval: 5s
 
     # metrics_path defaults to '/metrics'
     # scheme defaults to 'http'.
